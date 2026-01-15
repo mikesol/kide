@@ -8,6 +8,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    html { visibility: hidden; }
+    html.fonts-loaded { visibility: visible; }
+  </style>
+  <script>
+    document.fonts.ready.then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+    setTimeout(() => document.documentElement.classList.add('fonts-loaded'), 1000);
+  </script>
+  <style>
     * {
       margin: 0;
       padding: 0;
